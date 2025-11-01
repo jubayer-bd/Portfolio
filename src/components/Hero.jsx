@@ -2,14 +2,14 @@ import React from "react";
 import { motion } from "framer-motion";
 import { TypeAnimation } from "react-type-animation";
 import { FaReact, FaCss3Alt, FaGitAlt } from "react-icons/fa";
-import { SiTailwindcss, SiMongodb, SiFirebase, SiNodeDotJs } from "react-icons/si"; // fixed imports
+import { SiTailwindcss, SiMongodb, SiFirebase, SiNodeDotJs } from "react-icons/si";
 
 export default function Hero() {
   const icons = [
     { icon: <FaReact />, color: "text-cyan-400" },
-    { icon: <SiNodeDotJs />, color: "text-green-500" }, // fixed Node.js icon
+    { icon: <SiNodeDotJs />, color: "text-green-500" },   // Node.js fixed
     { icon: <SiTailwindcss />, color: "text-sky-400" },
-    { icon: <SiFirebase />, color: "text-yellow-400" }, // fixed Firebase icon
+    { icon: <SiFirebase />, color: "text-yellow-400" },   // Firebase fixed
     { icon: <SiMongodb />, color: "text-emerald-400" },
     { icon: <FaGitAlt />, color: "text-orange-500" },
     { icon: <FaCss3Alt />, color: "text-blue-500" },
@@ -106,4 +106,4 @@ export default function Hero() {
       </motion.div>
     </section>
   );
-}
+                    }
