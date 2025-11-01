@@ -5,16 +5,6 @@ import { FaReact, FaCss3Alt, FaGitAlt } from "react-icons/fa";
 import { SiTailwindcss, SiMongodb, SiFirebase, SiNodeDotJs } from "react-icons/si";
 
 export default function Hero() {
-  const icons = [
-    { icon: <FaReact />, color: "text-cyan-400" },
-    { icon: <SiNodeDotJs />, color: "text-green-500" },   // Node.js fixed
-    { icon: <SiTailwindcss />, color: "text-sky-400" },
-    { icon: <SiFirebase />, color: "text-yellow-400" },   // Firebase fixed
-    { icon: <SiMongodb />, color: "text-emerald-400" },
-    { icon: <FaGitAlt />, color: "text-orange-500" },
-    { icon: <FaCss3Alt />, color: "text-blue-500" },
-  ];
-
   return (
     <section className="max-w-5xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
       {/* LEFT SIDE */}
@@ -82,28 +72,23 @@ export default function Hero() {
               />
             </div>
 
+            {/* Static Icons Around Profile */}
             <motion.div
               className="absolute inset-0 w-60 h-60 md:w-72 md:h-72 mx-auto flex justify-center items-center pointer-events-none"
               animate={{ rotate: 360 }}
               transition={{ duration: 18, ease: "linear", repeat: Infinity }}
             >
-              {icons.map((item, i) => (
-                <motion.div
-                  key={i}
-                  className={`absolute text-2xl ${item.color}`}
-                  style={{
-                    transform: `rotate(${(360 / icons.length) * i}deg) translateY(-120px) rotate(-${
-                      (360 / icons.length) * i
-                    }deg)`,
-                  }}
-                >
-                  {item.icon}
-                </motion.div>
-              ))}
+              <FaReact className="absolute text-cyan-400 text-2xl" style={{ transform: 'rotate(0deg) translateY(-120px) rotate(0deg)' }} />
+              <SiNodeDotJs className="absolute text-green-500 text-2xl" style={{ transform: 'rotate(51.4deg) translateY(-120px) rotate(-51.4deg)' }} />
+              <SiTailwindcss className="absolute text-sky-400 text-2xl" style={{ transform: 'rotate(102.8deg) translateY(-120px) rotate(-102.8deg)' }} />
+              <SiFirebase className="absolute text-yellow-400 text-2xl" style={{ transform: 'rotate(154.2deg) translateY(-120px) rotate(-154.2deg)' }} />
+              <SiMongodb className="absolute text-emerald-400 text-2xl" style={{ transform: 'rotate(205.7deg) translateY(-120px) rotate(-205.7deg)' }} />
+              <FaGitAlt className="absolute text-orange-500 text-2xl" style={{ transform: 'rotate(257.1deg) translateY(-120px) rotate(-257.1deg)' }} />
+              <FaCss3Alt className="absolute text-blue-500 text-2xl" style={{ transform: 'rotate(308.5deg) translateY(-120px) rotate(-308.5deg)' }} />
             </motion.div>
           </div>
         </div>
       </motion.div>
     </section>
   );
-                    }
+}
