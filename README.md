@@ -14,7 +14,7 @@ _(https://portfolio-kbqh.vercel.app/#projects)_
 
 ## 🖼️ Preview
 
-![Portfolio Preview](./public/preview.png)
+![Portfolio Preview](./public/IMG_20251101_154000.jpg)
 
 ---
 
