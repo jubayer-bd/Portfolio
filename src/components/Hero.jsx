@@ -1,21 +1,15 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { TypeAnimation } from "react-type-animation";
-import {
-  FaReact,
-  FaNodeJs,
-  FaCss3Alt,
-  FaGitAlt,
-  FaFirebase,
-} from "react-icons/fa";
-import { SiTailwindcss, SiMongodb } from "react-icons/si";
+import { FaReact, FaCss3Alt, FaGitAlt } from "react-icons/fa";
+import { SiTailwindcss, SiMongodb, SiFirebase, SiNodeDotJs } from "react-icons/si"; // fixed imports
 
 export default function Hero() {
   const icons = [
     { icon: <FaReact />, color: "text-cyan-400" },
-    { icon: <FaNodeJs />, color: "text-green-500" },
+    { icon: <SiNodeDotJs />, color: "text-green-500" }, // fixed Node.js icon
     { icon: <SiTailwindcss />, color: "text-sky-400" },
-    { icon: <FaFirebase />, color: "text-yellow-400" },
+    { icon: <SiFirebase />, color: "text-yellow-400" }, // fixed Firebase icon
     { icon: <SiMongodb />, color: "text-emerald-400" },
     { icon: <FaGitAlt />, color: "text-orange-500" },
     { icon: <FaCss3Alt />, color: "text-blue-500" },
@@ -73,20 +67,13 @@ export default function Hero() {
         transition={{ duration: 0.6, delay: 0.2 }}
       >
         <div className="w-full h-72 rounded-2xl bg-gradient-to-br from-slate-800/60 to-slate-700/40 border border-slate-800 flex items-center justify-center shadow-lg relative overflow-hidden">
-          {/* PROFILE IMAGE + ROTATING ICONS */}
           <div className="relative text-center">
-            {/* Animated Glow Behind Logo */}
             <motion.div
               className="absolute inset-0 blur-2xl bg-gradient-to-tr from-teal-500 to-cyan-400 opacity-40 rounded-full"
               animate={{ scale: [1, 1.2, 1] }}
-              transition={{
-                repeat: Infinity,
-                duration: 3,
-                ease: "easeInOut",
-              }}
+              transition={{ repeat: Infinity, duration: 3, ease: "easeInOut" }}
             />
 
-            {/* Static Profile Circle */}
             <div className="relative w-36 h-36 md:w-44 md:h-44 rounded-full overflow-hidden border-4 border-cyan-400/50 mx-auto shadow-xl">
               <img
                 src="/circle.jpg"
@@ -95,24 +82,17 @@ export default function Hero() {
               />
             </div>
 
-            {/* Rotating Icons Around the Profile */}
             <motion.div
               className="absolute inset-0 w-60 h-60 md:w-72 md:h-72 mx-auto flex justify-center items-center pointer-events-none"
               animate={{ rotate: 360 }}
-              transition={{
-                duration: 18,
-                ease: "linear",
-                repeat: Infinity,
-              }}
+              transition={{ duration: 18, ease: "linear", repeat: Infinity }}
             >
               {icons.map((item, i) => (
                 <motion.div
                   key={i}
                   className={`absolute text-2xl ${item.color}`}
                   style={{
-                    transform: `rotate(${
-                      (360 / icons.length) * i
-                    }deg) translateY(-120px) rotate(-${
+                    transform: `rotate(${(360 / icons.length) * i}deg) translateY(-120px) rotate(-${
                       (360 / icons.length) * i
                     }deg)`,
                   }}
