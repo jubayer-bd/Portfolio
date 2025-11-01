@@ -8,7 +8,7 @@ It showcases my projects, skills, and professional journey as a **Full-Stack Web
 ## 🚀 Live Preview
 
 🔗 [View Portfolio](https://portfolio-kbqh.vercel.app/#projects)  
-_(https://portfolio-kbqh.vercel.app/#projects)_
+
 
 ---
 
