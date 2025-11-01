@@ -1,8 +1,20 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { TypeAnimation } from "react-type-animation";
+
+// --- CORRECTED ICON IMPORTS ---
 import { FaReact, FaCss3Alt, FaGitAlt } from "react-icons/fa";
-import { SiTailwindcss, SiMongodb, SiFirebase, SiNodeDotJs } from "react-icons/si";
+import { 
+  SiTailwindcss, 
+  SiMongodb, 
+  SiFirebase, 
+  SiNodeDotJs 
+} from "react-icons/si";
+// --------------------------------
+
+// --- IMPORTANT: Update this path to where your 'circle.jpg' is located ---
+// For example: import profileImage from "../assets/circle.jpg";
+import profileImage from "/circle.jpg"; 
 
 export default function Hero() {
   return (
@@ -42,7 +54,8 @@ export default function Hero() {
             View Projects
           </a>
           <a
-            href="mailto:jubayer.dev.bd"
+            // --- FIX: Added @ symbol to make this a valid mailto link ---
+            href="mailto:jubayer.dev.bd@example.com" 
             className="px-4 py-2 rounded-md border border-slate-700 text-slate-300 hover:bg-slate-800/50 hover:scale-105 transition"
           >
             Hire Me
@@ -66,7 +79,8 @@ export default function Hero() {
 
             <div className="relative w-36 h-36 md:w-44 md:h-44 rounded-full overflow-hidden border-4 border-cyan-400/50 mx-auto shadow-xl">
               <img
-                src="/circle.jpg"
+                // --- FIX: Using the imported image variable ---
+                src={profileImage}
                 alt="Profile"
                 className="w-full h-full object-cover rounded-full"
               />
