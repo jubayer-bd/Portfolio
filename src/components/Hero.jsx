@@ -2,24 +2,15 @@ import React from "react";
 import { motion } from "framer-motion";
 import { TypeAnimation } from "react-type-animation";
 
-// --- CORRECTED ICON IMPORTS ---
-import { FaReact, FaCss3Alt, FaGitAlt } from "react-icons/fa";
-import { 
-  SiTailwindcss, 
-  SiMongodb, 
-  SiFirebase, 
-  SiNodeDotJs 
-} from "react-icons/si";
-// --------------------------------
+// Removed all react-icons imports
 
-// --- IMPORTANT: Update this path to where your 'circle.jpg' is located ---
-// For example: import profileImage from "../assets/circle.jpg";
-import profileImage from "/circle.jpg"; 
+// No image import needed, as you confirmed the path works (assumes public folder access)
 
 export default function Hero() {
   return (
     <section className="max-w-5xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-      {/* LEFT SIDE */}
+      
+      {/* LEFT SIDE: Content and Buttons */}
       <motion.div
         initial={{ opacity: 0, x: -30 }}
         animate={{ opacity: 1, x: 0 }}
@@ -54,7 +45,7 @@ export default function Hero() {
             View Projects
           </a>
           <a
-            // --- FIX: Added @ symbol to make this a valid mailto link ---
+            // FIX: Mailto link corrected with placeholder domain.
             href="mailto:jubayer.dev.bd@example.com" 
             className="px-4 py-2 rounded-md border border-slate-700 text-slate-300 hover:bg-slate-800/50 hover:scale-105 transition"
           >
@@ -63,7 +54,7 @@ export default function Hero() {
         </div>
       </motion.div>
 
-      {/* RIGHT SIDE */}
+      {/* RIGHT SIDE: Profile Image (No Icons/Animations) */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -71,35 +62,16 @@ export default function Hero() {
       >
         <div className="w-full h-72 rounded-2xl bg-gradient-to-br from-slate-800/60 to-slate-700/40 border border-slate-800 flex items-center justify-center shadow-lg relative overflow-hidden">
           <div className="relative text-center">
-            <motion.div
-              className="absolute inset-0 blur-2xl bg-gradient-to-tr from-teal-500 to-cyan-400 opacity-40 rounded-full"
-              animate={{ scale: [1, 1.2, 1] }}
-              transition={{ repeat: Infinity, duration: 3, ease: "easeInOut" }}
-            />
-
+            
             <div className="relative w-36 h-36 md:w-44 md:h-44 rounded-full overflow-hidden border-4 border-cyan-400/50 mx-auto shadow-xl">
               <img
-                // --- FIX: Using the imported image variable ---
-                src={profileImage}
+                // Keeping original path as requested (must be in public folder)
+                src="/circle.jpg" 
                 alt="Profile"
                 className="w-full h-full object-cover rounded-full"
               />
             </div>
 
-            {/* Static Icons Around Profile */}
-            <motion.div
-              className="absolute inset-0 w-60 h-60 md:w-72 md:h-72 mx-auto flex justify-center items-center pointer-events-none"
-              animate={{ rotate: 360 }}
-              transition={{ duration: 18, ease: "linear", repeat: Infinity }}
-            >
-              <FaReact className="absolute text-cyan-400 text-2xl" style={{ transform: 'rotate(0deg) translateY(-120px) rotate(0deg)' }} />
-              <SiNodeDotJs className="absolute text-green-500 text-2xl" style={{ transform: 'rotate(51.4deg) translateY(-120px) rotate(-51.4deg)' }} />
-              <SiTailwindcss className="absolute text-sky-400 text-2xl" style={{ transform: 'rotate(102.8deg) translateY(-120px) rotate(-102.8deg)' }} />
-              <SiFirebase className="absolute text-yellow-400 text-2xl" style={{ transform: 'rotate(154.2deg) translateY(-120px) rotate(-154.2deg)' }} />
-              <SiMongodb className="absolute text-emerald-400 text-2xl" style={{ transform: 'rotate(205.7deg) translateY(-120px) rotate(-205.7deg)' }} />
-              <FaGitAlt className="absolute text-orange-500 text-2xl" style={{ transform: 'rotate(257.1deg) translateY(-120px) rotate(-257.1deg)' }} />
-              <FaCss3Alt className="absolute text-blue-500 text-2xl" style={{ transform: 'rotate(308.5deg) translateY(-120px) rotate(-308.5deg)' }} />
-            </motion.div>
           </div>
         </div>
       </motion.div>
