@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { FaEnvelope, FaLinkedin } from "react-icons/fa";
+import { FaEnvelope, FaGithub, FaLinkedin } from "react-icons/fa";
 
 export default function Contact() {
   return (
@@ -45,14 +45,14 @@ export default function Contact() {
           </motion.a>
 
           <motion.a
-            href="https://www.linkedin.com/in/md-jubayer-hossain-ab425a397/"
+            href="https://github.com/jubayer-bd"
             target="_blank"
             rel="noreferrer"
             className="flex items-center gap-3 text-slate-300 hover:text-cyan-400 transition"
             whileHover={{ scale: 1.05 }}
           >
-            <FaLinkedin className="text-xl" />
-            <span>LinkedIn Profile</span>
+            <FaGithub className="text-xl" />
+            <span>GitHub Profile</span>
           </motion.a>
         </div>
       </motion.div>
