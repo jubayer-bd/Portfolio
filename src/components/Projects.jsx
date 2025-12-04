@@ -1,31 +1,44 @@
-import React from "react";
+import React, { use, useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 
 export default function Projects() {
-  const projects = [
-    {
-      title: "Utility Bills",
-      desc: "A complete full-stack web application built with the MERN Stack that allows users to manage, pay, and track their utility bills from one place — all with a modern UI and smooth experience.",
-      tech: ["React", "Node.js", "MongoDB", "Express"],
-      live: "https://utility-bills-cfa.netlify.app/",
-      repo: "https://github.com/jubayer-bd/Utility_Bills_Client_Side",
-    },
-    {
-      title: "Warm Paws",
-      desc: "WarmPaws is a responsive React web application that helps pet owners find top-rated pet care services and winter care tips to keep their furry friends healthy and happy.",
-      tech: ["React", "Firebase", "Tailwind"],
-      live: "https://pets-care-paws.netlify.app/",
-      repo: "https://github.com/jubayer-bd/Warm-Paws",
-    },
-    {
-      title: "Portfolio",
-      desc: "My personal portfolio built with React and Tailwind, showcasing my skills and work.",
-      tech: ["React", "Tailwind", "Framer Motion"],
-      live: "https://portfolio-md-jubayer-hossain.netlify.app/",
-      repo: "https://github.com/jubayer-bd/Portfolio",
-    },
-  ];
+  const [projects, setProjects] = useState([]);
+  useEffect(() => {
+    document.documentElement.style.scrollBehavior = "smooth";
+    return () => {
+      document.documentElement.style.scrollBehavior = "auto";
+    };
+  }, []);
+  useEffect(() => {
+    fetch("https://portfolio-server-teal-one.vercel.app/projects")
+      .then((res) => res.json())
+      .then((data) => setProjects(data))
+      .catch((error) => console.error("Error fetching projects:", error));
+  });
+  // const projects = [
+  //   {
+  //     title: "Utility Bills",
+  //     desc: "A complete full-stack web application built with the MERN Stack that allows users to manage, pay, and track their utility bills from one place — all with a modern UI and smooth experience.",
+  //     tech: ["React", "Node.js", "MongoDB", "Express"],
+  //     live: "https://utility-bills-cfa.netlify.app/",
+  //     repo: "https://github.com/jubayer-bd/Utility_Bills_Client_Side",
+  //   },
+  //   {
+  //     title: "Warm Paws",
+  //     desc: "WarmPaws is a responsive React web application that helps pet owners find top-rated pet care services and winter care tips to keep their furry friends healthy and happy.",
+  //     tech: ["React", "Firebase", "Tailwind"],
+  //     live: "https://pets-care-paws.netlify.app/",
+  //     repo: "https://github.com/jubayer-bd/Warm-Paws",
+  //   },
+  //   {
+  //     title: "Portfolio",
+  //     desc: "My personal portfolio built with React and Tailwind, showcasing my skills and work.",
+  //     tech: ["React", "Tailwind", "Framer Motion"],
+  //     live: "https://portfolio-md-jubayer-hossain.netlify.app/",
+  //     repo: "https://github.com/jubayer-bd/Portfolio",
+  //   },
+  // ];
 
   return (
     <section id="projects" className="max-w-5xl mx-auto px-6 py-16">

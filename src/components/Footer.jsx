@@ -39,7 +39,7 @@ export default function Footer() {
             <FaGithub />
           </motion.a>
           <motion.a
-            href="https://www.linkedin.com/in/md-jubayer-hossain-ab425a397/"
+            href="https://www.linkedin.com/in/dev-jubayer/"
             target="_blank"
             rel="noreferrer"
             whileHover={{ scale: 1.2 }}

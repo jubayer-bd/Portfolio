@@ -19,9 +19,9 @@ export default function Hero() {
         <h2 className="text-3xl sm:text-4xl font-bold leading-tight text-slate-100">
           <TypeAnimation
             sequence={[
-              "Building modern web apps with React ⚛️",
+              "Building modern web apps with React and Next.js ⚛️",
               1500,
-              "Crafting scalable backends with Node.js 🚀",
+              "Crafting scalable backends with Node.js, Express and MongoDB 🛠️",
               1500,
               "Designing smooth UIs with Tailwind 💎",
               1500,

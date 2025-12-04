@@ -33,7 +33,7 @@ export default function Header() {
       {/* RIGHT SIDE - Links */}
       <nav className="flex items-center gap-2 sm:gap-3 text-sm">
         <motion.a
-          href="https://www.linkedin.com/in/md-jubayer-hossain-ab425a397/"
+          href="https://www.linkedin.com/in/dev-jubayer/"
           target="_blank"
           rel="noreferrer"
           // UPDATED: Adjusted padding (px-2 py-1) and gap (gap-1) for smaller screens.
