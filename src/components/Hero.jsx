@@ -46,10 +46,10 @@ export default function Hero() {
           </a>
           <a
             // FIX: Mailto link corrected with placeholder domain.
-            href="mailto:jubayer.dev.bd@example.com" 
+            href="https://drive.google.com/file/d/1Rsm1b5hnf6dK9fAO2A8WVE8ceZDarzgb/view" 
             className="px-4 py-2 rounded-md border border-slate-700 text-slate-300 hover:bg-slate-800/50 hover:scale-105 transition"
           >
-            Hire Me
+           Download Resume
           </a>
         </div>
       </motion.div>
@@ -66,7 +66,7 @@ export default function Hero() {
             <div className="relative w-36 h-36 md:w-44 md:h-44 rounded-full overflow-hidden border-4 border-cyan-400/50 mx-auto shadow-xl">
               <img
                 // Keeping original path as requested (must be in public folder)
-                src="/circle.jpg" 
+                src="/218382681.jpeg" 
                 alt="Profile"
                 className="w-full h-full object-cover rounded-full"
               />
