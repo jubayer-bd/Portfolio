@@ -42,7 +42,7 @@ export default function Skills() {
     { name: "HTML5", icon: <FaHtml5 className="text-orange-500" /> },
     { name: "CSS3", icon: <FaCss3Alt className="text-blue-500" /> },
     { name: "Tailwind CSS", icon: <SiTailwindcss className="text-sky-400" /> },
-    { name: "DaisyUI", icon: <SiDaisyui className="text-purple-400" /> },
+    // { name: "DaisyUI", icon: <SiDaisyui className="text-purple-400" /> },
 
     // ---------- Backend ----------
     { name: "Node.js", icon: <FaNodeJs className="text-green-500" /> },
@@ -53,7 +53,7 @@ export default function Skills() {
 
     // ---------- Tools & Platforms ----------
     { name: "Git & GitHub", icon: <FaGitAlt className="text-orange-500" /> },
-    { name: "VS Code", icon: <VscVscode className="text-blue-500" /> },
+    // { name: "VS Code", icon: <VscVscode className="text-blue-500" /> },
     { name: "Postman", icon: <SiPostman className="text-orange-500" /> },
     { name: "Firebase", icon: <SiFirebase className="text-yellow-400" /> },
     { name: "Axios", icon: <SiAxios className="text-blue-400" /> },
@@ -61,12 +61,12 @@ export default function Skills() {
 
     // ---------- Libraries & Utilities ----------
     { name: "TanStack Query", icon: <SiReactquery className="text-red-400" /> },
-    {
-      name: "React Hot Toast",
-      icon: <TbBellRinging className="text-yellow-300" />,
-    },
+    // {
+    //   name: "React Hot Toast",
+    //   icon: <TbBellRinging className="text-yellow-300" />,
+    // },
     { name: "GSAP", icon: <SiGreensock className="text-green-400" /> },
-    { name: "jsPDF", icon: <FaFilePdf className="text-blue-400"/>},
+    // { name: "jsPDF", icon: <FaFilePdf className="text-blue-400" /> },
 
     // ---------- Soft Skills ----------
     { name: "Problem Solving", icon: <span className="text-white">🧩</span> },
@@ -75,7 +75,7 @@ export default function Skills() {
   ];
 
   return (
-    <section className="max-w-5xl mx-auto px-6 py-12">
+    <section id="skills" className="max-w-6xl mx-auto px-6 py-12">
       <h3 className="text-3xl font-bold text-center mb-10 text-white">
         My <span className="text-sky-600">Skills</span>
       </h3>

@@ -5,6 +5,7 @@ import Projects from "./components/Projects";
 import Skills from "./components/Skills";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+
 import {
   motion,
   AnimatePresence,
@@ -12,19 +13,20 @@ import {
   useTransform,
 } from "framer-motion";
 import { FaArrowUp } from "react-icons/fa";
+import SmoothScroll from "./components/SmoothScroll";
 
 export default function Portfolio() {
   const [showTopBtn, setShowTopBtn] = useState(false);
   const { scrollYProgress } = useScroll();
 
-  // Scroll-reactive background gradient
+  // Smooth gradient transitions without overflow
   const bgGradient = useTransform(
     scrollYProgress,
     [0, 0.5, 1],
     [
-      "linear-gradient(135deg, #0f172a, #1e293b, #0d9488)", // top
-      "linear-gradient(135deg, #0f172a, #0d9488, #1e40af)", // mid
-      "linear-gradient(135deg, #1e293b, #0f172a, #0891b2)", // bottom
+      "linear-gradient(135deg, #0f172a, #1e293b, #0d9488)",
+      "linear-gradient(135deg, #0f172a, #0d9488, #1e40af)",
+      "linear-gradient(135deg, #1e293b, #0f172a, #0891b2)",
     ]
   );
 
@@ -46,26 +48,14 @@ export default function Portfolio() {
   };
 
   return (
-    <div
-      className="relative min-h-screen text-slate-100 antialiased overflow-x-hidden"
-      style={{
-        scrollbarWidth: "none", // Firefox
-        msOverflowStyle: "none", // IE/Edge
-      }}
-    >
-      {/* Hide scrollbar visually but keep scroll working */}
-      <style>
-        {`
-          /* Hide scrollbar for Chrome, Safari and Edge */
-          ::-webkit-scrollbar {
-            display: none;
-          }
-        `}
-      </style>
+    <div className="relative min-h-screen text-slate-100 antialiased overflow-x-hidden">
+      
+      {/* 🚀 Smooth Scroll (Lenis) */}
+      <SmoothScroll />
 
-      {/* 🌈 Scroll-Reactive Gradient Background */}
+      {/* 🌈 Smooth, fixed gradient background (no overflow issue) */}
       <motion.div
-        className="absolute inset-0 -z-10 transition-all duration-1000"
+        className="fixed inset-0 -z-10 will-change-transform"
         style={{ background: bgGradient }}
       />
 
@@ -77,6 +67,7 @@ export default function Portfolio() {
         transition={{ staggerChildren: 0.2 }}
         className="space-y-12 md:space-y-20"
       >
+        {/* Hero */}
         <motion.div
           variants={sectionVariant}
           initial="hidden"
@@ -86,6 +77,7 @@ export default function Portfolio() {
           <Hero />
         </motion.div>
 
+        {/* Projects */}
         <motion.div
           variants={sectionVariant}
           initial="hidden"
@@ -95,6 +87,7 @@ export default function Portfolio() {
           <Projects />
         </motion.div>
 
+        {/* Skills */}
         <motion.div
           variants={sectionVariant}
           initial="hidden"
@@ -104,6 +97,7 @@ export default function Portfolio() {
           <Skills />
         </motion.div>
 
+        {/* Contact */}
         <motion.div
           variants={sectionVariant}
           initial="hidden"
