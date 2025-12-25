@@ -11,6 +11,7 @@ export default function Footer() {
       transition={{ duration: 0.6 }}
       viewport={{ once: true }}
     >
+      {/* hi  */}
       <div className="max-w-5xl mx-auto px-6 text-center text-slate-400 text-sm space-y-3">
         <p>
           © {new Date().getFullYear()}{" "}
