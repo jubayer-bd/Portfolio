@@ -22,43 +22,43 @@ const PROJECTS_DATA = [
     tech: ["React", "Node.js", "MongoDB", "Recharts"],
     live: "https://utility-bills-cfa.netlify.app/",
     repo: "https://github.com/jubayer-bd/Utility_Bills_Client_Side",
-    image: "https://i.ibb.co.com/5XnnqJc1/digital-Life-Lesson.png",
+    image: "https://i.ibb.co.com/yBRx9P1J/screenshot-20260105111154.png",
     challenges: "Visualizing data effectively using charts and ensuring distinct separation of user data in a multi-tenant architecture.",
     improvements: "Integration with real banking APIs for automated payments and SMS notifications for due dates.",
   },
   {
     _id: "3",
-    title: "Warm Paws",
-    desc: "A responsive platform connecting pet owners with top-rated care services and winter tips.",
-    tech: ["React", "Firebase", "Tailwind", "Node.js"],
-    live: "https://pets-care-paws.netlify.app/",
-    repo: "https://github.com/jubayer-bd/Warm-Paws",
-    image: "https://i.ibb.co.com/5XnnqJc1/digital-Life-Lesson.png",
-    challenges: "Creating a seamless booking system that handles time-zone differences and conflicting schedules.",
-    improvements: "Adding a verified review system for caregivers and a lost-and-found pet geolocation feature.",
-  },
-  {
-    _id: "4",
     title: "Shop Hub",
     desc: "A modern e-commerce app with cart functionality, wishlists, and secure authentication.",
     tech: ["Next.js", "Firebase", "MongoDB", "Stripe"],
     live: "https://shop-hub-coral.vercel.app/",
     repo: "https://github.com/jubayer-bd/SHOP-HUB",
-    image: "https://i.ibb.co.com/5XnnqJc1/digital-Life-Lesson.png",
+    image: "https://i.ibb.co.com/Cx5QvW1/screenshot-20251226100528.png",
     challenges: "Optimizing image loading for thousands of products and managing global state for the shopping cart.",
     improvements: "Implementing server-side rendering (SSR) for better SEO and adding a dark mode toggle.",
   },
   {
-    _id: "5",
-    title: "Task Master",
-    desc: "A Kanban-style project management tool with drag-and-drop capabilities.",
-    tech: ["React", "Redux", "DND-Kit", "Supabase"],
-    live: "#",
-    repo: "#",
-    image: "https://i.ibb.co.com/5XnnqJc1/digital-Life-Lesson.png",
-    challenges: "Handling complex drag-and-drop state persistence across different columns.",
-    improvements: "Adding team collaboration features via WebSockets.",
+    _id: "4",
+    title: "Warm Paws",
+    desc: "A responsive platform connecting pet owners with top-rated care services and winter tips.",
+    tech: ["React", "Firebase", "Tailwind", "Node.js"],
+    live: "https://pets-care-paws.netlify.app/",
+    repo: "https://github.com/jubayer-bd/Warm-Paws",
+    image: "https://i.ibb.co.com/MygJJ8f9/warm-paws.png",
+    challenges: "Creating a seamless booking system that handles time-zone differences and conflicting schedules.",
+    improvements: "Adding a verified review system for caregivers and a lost-and-found pet geolocation feature.",
   },
+  // {
+  //   _id: "5",
+  //   title: "Task Master",
+  //   desc: "A Kanban-style project management tool with drag-and-drop capabilities.",
+  //   tech: ["React", "Redux", "DND-Kit", "Supabase"],
+  //   live: "#",
+  //   repo: "#",
+  //   image: "https://i.ibb.co.com/5XnnqJc1/digital-Life-Lesson.png",
+  //   challenges: "Handling complex drag-and-drop state persistence across different columns.",
+  //   improvements: "Adding team collaboration features via WebSockets.",
+  // },
 ];
 
 // --- COMPONENT: PROJECT CARD ---
@@ -283,7 +283,7 @@ export default function Projects() {
   }, [selectedProject]);
 
   return (
-    <section id="projects" className="py-24 relative overflow-hidden bg-slate-950">
+    <section id="projects" className="py-24 relative overflow-hidden ">
       {/* Background Decor */}
       <div className="absolute top-0 left-1/4 w-96 h-96 bg-cyan-500/10 rounded-full blur-[100px] -z-10" />
       <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-[100px] -z-10" />

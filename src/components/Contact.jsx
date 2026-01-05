@@ -1,7 +1,7 @@
 import React, { useState, useRef } from "react";
 import { motion } from "framer-motion";
 import { FaEnvelope, FaGithub, FaLinkedin, FaPaperPlane } from "react-icons/fa";
-import { MdAddIcCall } from "react-icons/md";// npm install @emailjs/browser
+import { MdAddIcCall } from "react-icons/md"; // npm install @emailjs/browser
 import emailjs from "@emailjs/browser";
 
 export default function Contact() {
@@ -39,7 +39,7 @@ export default function Contact() {
   return (
     <section id="contact" className="relative py-24 px-6 overflow-hidden">
       {/* Decorative Background Elements */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full max-w-6xl pointer-events-none z-0">
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full max-w-6xl pointer-events-none ">
         <div className="absolute top-20 left-20 w-72 h-72 bg-teal-500/10 rounded-full blur-3xl" />
         <div className="absolute bottom-20 right-20 w-80 h-80 bg-blue-600/10 rounded-full blur-3xl" />
       </div>
@@ -106,7 +106,7 @@ export default function Contact() {
                 icon={<MdAddIcCall />}
                 label="Phone"
                 value="+8801977898348"
-                href="callto:+8801977898348"
+                href="tel:+8801977898348"
                 color="hover:text-blue-400"
               />
             </div>

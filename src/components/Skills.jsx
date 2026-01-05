@@ -122,7 +122,7 @@ export default function Skills() {
         <div className="absolute bottom-[10%] left-[20%] w-[400px] h-[400px] bg-purple-500/5 rounded-full blur-[80px]" />
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 relative z-10">
+      <div className="max-w-7xl mx-auto px-6 relative ">
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}

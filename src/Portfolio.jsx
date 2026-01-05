@@ -21,15 +21,19 @@ export default function Portfolio() {
   const { scrollYProgress } = useScroll();
 
   // Smooth gradient transitions without overflow
-  const bgGradient = useTransform(
-    scrollYProgress,
-    [0, 0.5, 1],
-    [
-      "linear-gradient(135deg, #0f172a, #1e293b, #0d9488)",
-      "linear-gradient(135deg, #0f172a, #0d9488, #1e40af)",
-      "linear-gradient(135deg, #1e293b, #0f172a, #0891b2)",
-    ]
-  );
+const bgGradient = useTransform(
+  scrollYProgress,
+  [0, 0.5, 1],
+  [
+    "linear-gradient(135deg, #0f172a, #020617, #0f172a)", // slate-900 depth
+    "linear-gradient(135deg, #0f172a, #020617, #083344)", // subtle cyan hint
+    "linear-gradient(135deg, #020617, #0f172a, #164e63)", // elegant finish
+  ]
+);
+
+
+
+
 
   useEffect(() => {
     const handleScroll = () => setShowTopBtn(window.scrollY > 400);
@@ -39,27 +43,37 @@ export default function Portfolio() {
 
   const scrollToTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
 
+  // 🚀 SMOOTH ANIMATION: Using 'spring' physics for a premium feel
+  // Instead of a linear slide, this gives elements a subtle weight/bounce
   const sectionVariant = {
-    hidden: { opacity: 0, y: 40 },
+    hidden: { opacity: 0, y: 50 },
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.7, ease: "easeOut" },
+      transition: {
+        type: "spring",
+        stiffness: 100,
+        damping: 20,
+        mass: 1,
+      },
     },
   };
 
   return (
-    <div className="relative min-h-screen text-slate-100 antialiased overflow-x-hidden">
+    <div className="relative min-h-screen text-slate-100 antialiased overflow-x-hidden selection:bg-teal-400 selection:text-slate-900">
       {/* 🚀 Smooth Scroll (Lenis) */}
       <SmoothScroll />
 
-      {/* 🌈 Smooth, fixed gradient background (no overflow issue) */}
+      {/* 🌈 Smooth, fixed gradient background */}
       <motion.div
         className="fixed inset-0 -z-10 will-change-transform"
         style={{ background: bgGradient }}
       />
 
-      <Header />
+      {/* Header */}
+      <div className="relative z-50">
+        <Header />
+      </div>
 
       <motion.main
         initial="hidden"
@@ -86,6 +100,7 @@ export default function Portfolio() {
         >
           <About />
         </motion.div>
+
         {/* Projects */}
         <motion.div
           variants={sectionVariant}
@@ -125,13 +140,15 @@ export default function Portfolio() {
           <motion.button
             key="scroll-top"
             onClick={scrollToTop}
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: 40 }}
-            transition={{ duration: 0.3 }}
+            initial={{ opacity: 0, scale: 0.5, y: 40 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            exit={{ opacity: 0, scale: 0.5, y: 40 }}
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+            transition={{ type: "spring", stiffness: 300, damping: 20 }}
             className="fixed bottom-6 right-6 md:bottom-8 md:right-8 p-3 md:p-4 rounded-full 
               bg-gradient-to-r from-teal-500 to-cyan-400 text-slate-900 shadow-lg 
-              hover:scale-110 transition"
+              hover:shadow-teal-500/50 transition z-50"
           >
             <FaArrowUp />
           </motion.button>
