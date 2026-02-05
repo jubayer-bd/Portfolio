@@ -20,7 +20,7 @@ const PROJECTS_DATA = [
     title: "Utility Bills",
     desc: "A dashboard to manage, pay, and track utility bills with a modern UI and analytics.",
     tech: ["React", "Node.js", "MongoDB", "Recharts"],
-    live: "https://utility-bills-cfa.netlify.app/",
+    live: "https://utility-bills.vercel.app/",
     repo: "https://github.com/jubayer-bd/Utility_Bills_Client_Side",
     image: "https://i.ibb.co.com/yBRx9P1J/screenshot-20260105111154.png",
     challenges: "Visualizing data effectively using charts and ensuring distinct separation of user data in a multi-tenant architecture.",
@@ -285,8 +285,8 @@ export default function Projects() {
   return (
     <section id="projects" className="py-24 relative overflow-hidden ">
       {/* Background Decor */}
-      <div className="absolute top-0 left-1/4 w-96 h-96 bg-cyan-500/10 rounded-full blur-[100px] -z-10" />
-      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-[100px] -z-10" />
+      <div className="absolute top-0 left-1/4 w-96 h-96  rounded-full blur-[100px] -z-10" />
+      <div className="absolute bottom-0 right-1/4 w-96 h-96  rounded-full blur-[100px] -z-10" />
 
       <div className="max-w-7xl mx-auto px-6">
         {/* Section Header */}

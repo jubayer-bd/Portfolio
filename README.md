@@ -8,7 +8,7 @@
   ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
   ![Framer Motion](https://img.shields.io/badge/Framer_Motion-0055FF?style=for-the-badge&logo=framer&logoColor=white)
 
-  [View Live Demo](https://jubayer-bd.netlify.app/) • [Report Bug](https://github.com/yourusername/portfolio/issues) • [Request Feature](https://github.com/yourusername/portfolio/issues)
+  [View Live Demo](https://www.jubayer-dev.me/) 
 
 </div>
 
@@ -19,10 +19,10 @@
 
 This portfolio highlights my projects, skills, and professional journey as a **Full-Stack Web Developer** with expertise in the **MERN stack**. It is built with performance and aesthetics in mind, utilizing **React** for structure, **Tailwind CSS** for styling, and **Framer Motion** for fluid animations.
 
-### 🖼️ Preview
+<!-- ### 🖼️ Preview
 
 ![Portfolio Preview](./public/IMG_20251101_154000.jpg)
-*(Note: Ensure your image path matches your repository structure)*
+*(Note: Ensure your image path matches your repository structure)* -->
 
 ---
 

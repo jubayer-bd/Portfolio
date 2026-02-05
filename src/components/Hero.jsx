@@ -84,7 +84,7 @@ export default function Hero() {
           </a>
 
           <a
-            href="https://drive.google.com/file/d/1Rsm1b5hnf6dK9fAO2A8WVE8ceZDarzgb/view"
+            href="https://drive.google.com/file/d/1VWEWRyxCL91XqemAgsaTbu8HMOoCsxD0/view?usp=sharing"
             target="_blank"
             rel="noreferrer"
             className="px-6 py-3 rounded-md border border-slate-700 
